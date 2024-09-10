@@ -22,7 +22,7 @@ function levelUp() {
     if (aniContainer) {
         let currentPath = getLevelByString(aniContainer.src);
         var nextLevel = getNextLevel(currentPath);
-        let currentChar = getCharacter(aniContainer.src);
+        var currentChar = getCharacter(aniContainer.src);
         if (nextLevel === "SuperSaiyan3") {
             aniContainer.style.height = "115%";
             aniContainer.style.top = "-24%";
@@ -35,7 +35,7 @@ function levelUp() {
     }
 
     setTimeout(() => {
-        aniContainer.src = `./images/Goku_Idle_${nextLevel}.gif`;
+        aniContainer.src = `./images/${currentChar}_Idle_${nextLevel}.gif`;
         currentLevel++;
         isTimerRunning = false;
         aniContainer.style.height = "70%";

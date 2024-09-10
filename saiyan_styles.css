@@ -40,7 +40,10 @@ p {
 .img-container {
     position: relative;
     text-align: center;
-    border: solid white;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: #ff8409;
+    border-style:outset;
     width: 400px;
     height: 250px;
     margin: auto;
