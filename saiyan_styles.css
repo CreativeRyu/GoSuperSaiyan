@@ -1,0 +1,128 @@
+body {
+    background-color: rgb(55, 118, 181);
+}
+
+h1 {
+    font-family: 'Kemco Pixel', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: 'superhelio _regular', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.content-container {
+    display: grid;
+    flex-direction: column;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+}
+
+.card {
+    /* border: solid black 5px; */
+}
+
+.button-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    /* adjust the height to your needs */
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    border: solid white;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    background-image: url("./images/budokai.gif");
+    background-position: bottom left;
+}
+
+.ani-container {
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    height: 70%;
+    z-index: 10;
+}
+
+.select-button {
+    width: 80px;
+    height: 20px;
+    border: 3px #d3d3d3;
+    border-style: groove;
+    border-radius: 20px;
+    background: #aeaeae;
+    cursor: pointer;
+}
+
+.select-button:hover {
+    background: #808080;
+    border-color: #d1d1d1;
+    box-shadow: 0px 0px 3px 3px rgb(245, 245, 245);
+}
+
+.select-button:active {
+    box-shadow: inset 0px 0px 2px 2px rgb(74, 74, 74);
+    border-radius: 20px;
+}
+
+.char-card {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    height: 270px;
+    /* adjust the height to your needs */
+}
+
+.char-button {
+    margin-left: 10px;
+    background-color: rgba(71, 68, 115, 0.443);
+    width: 50px;
+    height: 50px;
+    border: 3px #ff8409;
+    border-style: outset;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.char-button:hover {
+    background-color: rgba(118, 114, 181, 0.443);
+    border-color: #ffb163;
+    box-shadow: 0px 0px 3px 3px rgb(255, 187, 119);
+}
+
+.char-button:active {
+    box-shadow: inset 0px 0px 2px 2px rgb(74, 74, 74);
+    border-radius: 15px;
+}
+
+#goku-button {
+    background-image: url("./images/Goku_Icon.png");
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+#vegeta-button {
+    background-image: url("./images/Vegeta_Icon.png");
+    background-size: 50px 50px;
+    background-position: center;
+}
+
+#trunks-button {
+    background-image: url("./images/Trunks_Icon.png");
+    background-size: 50px 50px;
+    background-position: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/superhelio" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/kemco-pixel" rel="stylesheet">
+  <link rel="stylesheet" href="./saiyan_styles.css">
+  <title>Go Super Saiyan</title>
+</head>
+
+<body>
+  <div class="content-container">
+    <div class="card"></div>
+    <div class="card">
+      <h1>Go Super Saiyan</h1>
+      <div class="img-container">
+        <img class="ani-container" src="./images/Goku_Idle_Regular.gif" alt="">
+      </div>
+    </div>
+    <div class="card char-card">
+      <p>Choose your Character</p>
+      <button id="goku-button" class=char-button onclick="loadCharacter(this);"></button>
+      <button id="vegeta-button" class=char-button onclick="loadCharacter(this);"></button>
+      <button id="trunks-button" class=char-button onclick="loadCharacter(this);"></button>
+    </div>
+    <div class="card"></div>
+
+    <div class="card button-card">
+      <p id="next-level-text">
+        Go Next Level
+      </p>
+      <button class="select-button" onclick="levelUp();"></button>
+    </div>
+    <div class="card"></div>
+  </div>
+  <script src="./saiyan.js"></script>
+  
+</body>
+
+</html>
