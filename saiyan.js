@@ -1,7 +1,7 @@
 var aniContainer = document.querySelector(".ani-container");
 var isTimerRunning = false;
 
-const level = ["Super Saiyan", "Super Saiyan 2", "Super Saiyan 3", "Super Saiyan God"];  
+const level = ["Super Saiyan", "Super Saiyan 2", "Super Saiyan 3", "Super Saiyan God"];
 var currentLevel = 0;
 
 function loadCharacter(event) {
@@ -23,25 +23,36 @@ function levelUp() {
         let currentPath = getLevelByString(aniContainer.src);
         var nextLevel = getNextLevel(currentPath);
         var currentChar = getCharacter(aniContainer.src);
-        if (nextLevel === "SuperSaiyan3") {
-            aniContainer.style.height = "115%";
-            aniContainer.style.top = "-24%";
-            aniContainer.style.left = "14%";
-        }
-        aniContainer.src = `./images/${currentChar}_Transformation_${nextLevel}.gif`;
+
+        const nextGif = new Image();
+        nextGif.onload = function () {
+            if (nextLevel === "SuperSaiyan3") {
+                aniContainer.style.height = "115%";
+                aniContainer.style.top = "-24%";
+                aniContainer.style.left = "14%";
+                aniContainer.src = nextGif.src;
+            } else {
+                aniContainer.style.height = "70%";
+                aniContainer.style.top = "22%";
+                aniContainer.style.left = "32%";
+                aniContainer.src = nextGif.src;
+            }
+
+        };
+        nextGif.src = `./images/${currentChar}_Transformation_${nextLevel}.gif`;
+        aniContainer.src = `./images/${currentChar}_Idle_${nextLevel}.gif`;
 
     } else {
         console.error("Element nicht gefunden");
     }
-
     setTimeout(() => {
-        aniContainer.src = `./images/${currentChar}_Idle_${nextLevel}.gif`;
         currentLevel++;
         isTimerRunning = false;
         aniContainer.style.height = "70%";
         aniContainer.style.top = "22%";
         aniContainer.style.left = "32%";
-    }, "2500");
+        aniContainer.src = `./images/${currentChar}_Idle_${nextLevel}.gif`;
+    }, "2700");
 }
 
 function getLevelByString(imageSource) {
