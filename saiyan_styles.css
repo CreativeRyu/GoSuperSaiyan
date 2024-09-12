@@ -113,19 +113,19 @@ p {
 }
 
 #goku-button {
-    background-image: url("./images/goku_Icon.png");
+    background-image: url("./images/Goku_Icon.png");
     background-size: 50px 50px;
     background-position: center;
 }
 
 #vegeta-button {
-    background-image: url("./images/vegeta_Icon.png");
+    background-image: url("./images/Vegeta_Icon.png");
     background-size: 50px 50px;
     background-position: center;
 }
 
 #trunks-button {
-    background-image: url("./images/trunks_Icon.png");
+    background-image: url("./images/Trunks_Icon.png");
     background-size: 50px 50px;
     background-position: center;
 }

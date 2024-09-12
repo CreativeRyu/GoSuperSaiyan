@@ -79,5 +79,6 @@ function getNextLevel(currentLevel) {
 function getCharacter(imageSource) {
     let currentCharacter = imageSource.split("_")[0];
     currentCharacter = currentCharacter.split("/").pop();
-    return currentCharacter;
+
+    return currentCharacter.charAt(0).toUpperCase() + currentCharacter.slice(1);
 }
