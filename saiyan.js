@@ -10,6 +10,7 @@ function loadCharacter(event) {
     }
     var char = event.id.toString();
     char = char.split("-")[0];
+    char = char.charAt(0).toUpperCase() + char.slice(1)
     aniContainer.src = `./images/${char}_Idle_Regular.gif`;
 }
 
